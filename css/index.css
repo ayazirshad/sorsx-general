@@ -15,7 +15,8 @@
 }
 @font-face {
   font-family: "Inter";
-  src: url("../assets/index/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("../assets/index/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -23,7 +24,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../assets/index/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  src: url("../assets/index/fonts/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -2662,7 +2664,7 @@ button {
   overflow: hidden;
   max-height: 610px;
 
-  background-image: var(--bg);
+  /* background-image: var(--bg); */
   background-size: cover;
   background-position: center;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
@@ -2673,6 +2675,16 @@ button {
   /* max-width: 327px; */
   height: 600px;
   width: 100%;
+}
+
+.t-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 @media (max-width: 1536px) {
@@ -2983,4 +2995,3 @@ button {
     border-bottom: 1px solid rgba(15, 23, 42, 0.1);
   }
 }
-
