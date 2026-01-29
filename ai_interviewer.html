@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Interviewer</title>
+    <link rel="stylesheet" href="css/ai_interviewer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header  -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo-wrapper">
+          <img src="assets/ai_interviewer/SorsX-Logo-Black.svg" alt="logo" class="logo" />
+        </div>
+
+        <nav class="nav-links" id="mobileMenu">
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <p class="text-B2">Platform</p>
+              <img
+                src="assets/ai_interviewer/drop_down_icon.png"
+                alt="Toggle"
+                class="dropdown-icon"
+              />
+            </button>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-grid">
+                <!-- Left Column -->
+                <div class="mega-menu-column">
+                  <a href="sorsx_ai.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">SorsX AI</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Discover talent automatically
+                      </p>
+                    </div>
+                  </a>
+                  <a href="sorsx_next.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">SorsX Next</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Rank candidates using skills
+                      </p>
+                    </div>
+                  </a>
+                  <a href="ai_ats_crm.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">AI ATS & CRM</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Automated, on-demand video
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Right Column -->
+                <div class="mega-menu-column">
+                  <a href="sorsx_hire.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Scale Hire</p>
+                      <p class="text-C1 mega-menu-desc">Track time-to-hire,</p>
+                    </div>
+                  </a>
+                  <a href="ai_interviewer.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">AI Interviewer</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Auto-schedule with calendar
+                      </p>
+                    </div>
+                  </a>
+                  <a href="demo_page_1.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Demo</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Real-time updates for teams
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <p class="text-B2">Industries</p>
+              <img
+                src="assets/ai_interviewer/drop_down_icon.png"
+                alt="Toggle"
+                class="dropdown-icon"
+              />
+            </button>
+            <!-- have to change the dropdown menus for next 4 dropdowns  -->
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-grid">
+                <!-- Left Column -->
+                <div class="mega-menu-column">
+                  <a href="hospitality.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Hospitality</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Hire service staff faster.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="construction.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Construction</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Find skilled site workers.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="tech.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Tech</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Hire top tech talent.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Right Column -->
+                <div class="mega-menu-column">
+                  <a href="manufacturing.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Manufacturing</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Scale workforce efficiently.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="index.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">
+                        Professional Services
+                      </p>
+                      <p class="text-C1 mega-menu-desc">
+                        Hire Trusted Professionals
+                      </p>
+                    </div>
+                  </a>
+                  <a href="healthcare.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Healthcare</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Recruit qualified caregivers.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <p class="text-B2">Business Size</p>
+              <img
+                src="assets/ai_interviewer/drop_down_icon.png"
+                alt="Toggle"
+                class="dropdown-icon"
+              />
+            </button>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-grid">
+                <!-- Left Column -->
+                <div class="mega-menu-column">
+                  <a href="small_businesses.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Small businesses</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Hire smarter, faster.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="midsize_businesses.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Mid Size Businesses</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Scale hiring efficiently.
+                      </p>
+                    </div>
+                  </a>
+                  <a href="enterprise.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Enterprise</p>
+                      <p class="text-C1 mega-menu-desc">
+                        Manage hiring at scale.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-toggle">
+              <p class="text-B2">Company</p>
+              <img
+                src="assets/ai_interviewer/drop_down_icon.png"
+                alt="Toggle"
+                class="dropdown-icon"
+              />
+            </button>
+            <div class="dropdown-menu mega-menu">
+              <div class="mega-menu-grid">
+                <!-- Left Column -->
+                <div class="mega-menu-column">
+                  <a href="index.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Home</p>
+                      <p class="text-C1 mega-menu-desc">Get started quickly.</p>
+                    </div>
+                  </a>
+                  <a href="index.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Platform</p>
+                      <p class="text-C1 mega-menu-desc">All hiring tools.</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Right Column -->
+                <div class="mega-menu-column">
+                  <a href="index.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Solutions</p>
+                      <p class="text-C1 mega-menu-desc">Hiring made simple.</p>
+                    </div>
+                  </a>
+                  <a href="index.html" class="mega-menu-item">
+                    <img
+                      src="assets/ai_interviewer/mega_menu_icon.png"
+                      alt="icon"
+                      class="mega-menu-icon"
+                    />
+                    <div class="mega-menu-content">
+                      <p class="text-B2 mega-menu-title">Resources</p>
+                      <p class="text-C1 mega-menu-desc">Guides and insights.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-btn-mobile">
+            <a
+              href="https://www.sorsx.com/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Login"
+              class="login-link"
+              >Log In</a
+            >
+
+            <button class="nav-button">
+              <a
+                href="https://employer.sorsx.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Request a demo</a
+              >
+            </button>
+          </div>
+        </nav>
+
+        <div class="cta-btn-desktop">
+          <button class="dropdown-toggle">
+            <img
+              src="assets/ai_interviewer/globe_01.png"
+              alt="globe"
+              class="dropdown-icon"
+            />
+          </button>
+          <a
+            href="https://www.sorsx.com/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Login"
+            class="login-link"
+            >Log In</a
+          >
+
+          <button class="blue-button">
+            <a
+              href="https://employer.sorsx.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Request a demo</a
+            >
+          </button>
+        </div>
+
+        <button class="toggle-btn" id="menuToggleBtn">
+          <img src="assets/ai_interviewer/menu.svg" alt="Menu" id="menuIcon" />
+        </button>
+      </div>
+    </header>
+
+    <!-- hero  -->
+    <section class="text-center hero-section">
+      <div class="container">
+        <div class="page-name-wrapper flex-center">
+          <p class="page-name-text">AI Interviewer</p>
+        </div>
+        <h1 class="main-heading">
+          <span class="first-word">AI Interview</span> Software for<br />
+          <span>Any Role</span>
+        </h1>
+        <p class="sub-text">
+          Dynamic AI video interviews probe deeper and score consistently, so
+          managers trust every shortlist.
+        </p>
+        <div class="btn-wrapper">
+          <button class="blue-border-button">
+            <p>Request a demo</p>
+          </button>
+        </div>
+        <div class="mobile-image">
+          <img src="assets/ai_interviewer/hero_mobile_img.svg" alt="hero-image" />
+        </div>
+        <div class="hero-image-wrapper desktop-image">
+          <img
+            src="assets/ai_interviewer/hero_img.png"
+            alt="hero-image"
+            class="hero-main-img"
+          />
+        </div>
+      </div>
+      <!-- slider  -->
+      <div class="slider container">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_1.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_2.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_3.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_4.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_5.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_6.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_7.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_8.svg" alt="scrollLogo" />
+          </div>
+          <!-- duplicate  -->
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_1.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_2.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_3.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_4.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_5.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_6.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_7.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_8.svg" alt="scrollLogo" />
+          </div>
+          <!-- triple -->
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_1.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_2.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_3.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_4.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_5.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_6.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_7.svg" alt="scrollLogo" />
+          </div>
+          <div class="slide">
+            <img src="assets/ai_interviewer/logo_8.svg" alt="scrollLogo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- logos for mobile  -->
+    <div class="container logo-stack">
+      <div class="stack-logo-1">
+        <img src="assets/ai_interviewer/logo_1.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-2">
+        <img src="assets/ai_interviewer/logo_2.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-3">
+        <img src="assets/ai_interviewer/logo_3.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-4">
+        <img src="assets/ai_interviewer/logo_4.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-5">
+        <img src="assets/ai_interviewer/logo_5.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-6">
+        <img src="assets/ai_interviewer/logo_6.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-7">
+        <img src="assets/ai_interviewer/logo_7.svg" alt="scrollLogo" />
+      </div>
+      <div class="stack-logo-8">
+        <img src="assets/ai_interviewer/logo_8.svg" alt="scrollLogo" />
+      </div>
+    </div>
+
+    <!-- for recruiters section -->
+    <section class="info-section feature-info-section">
+      <div class="container flex">
+        <div class="info-content">
+          <div class="page-name-text">For Recruiters</div>
+          <h3>No more guessing technical questions</h3>
+          <p class="section-description">
+            AI Interviewer generates role-aligned interview questions from
+            minimal input, reducing research time and inconsistency. It
+            standardizes the first round so recruiters don’t have to “carry”
+            technical evaluations alone. Hiring teams get a cleaner signal
+            without adding more meetings.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="assets/ai_interviewer/for_recruiters_img.png" alt="for recruiters" />
+        </div>
+      </div>
+    </section>
+
+    <!-- outreach section -->
+    <section class="info-section outreach-section padding-y">
+      <div class="container flex">
+        <div class="info-image">
+          <img src="assets/ai_interviewer/for_hiring_img.png" alt="For Hiring managers" />
+        </div>
+        <div class="info-content">
+          <div class="page-name-text">For Hiring Managers</div>
+          <h3>Probing interviews that validate answers</h3>
+          <p class="section-description">
+            AI Interviewer dynamically adapts and probes when responses are
+            unclear or low-signal, helping reduce “smooth talk” outcomes. It
+            produces structured evaluations that make it easier to compare
+            candidates across roles and locations. Managers can join live or
+            review results after.
+          </p>
+          <div class="mt-3">
+            <button class="white-button">See AI Interviewer in action</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- talent section -->
+    <section class="info-section feature-info-section padding-y">
+      <div class="container flex-between gap-10">
+        <div class="info-content">
+          <div class="page-name-text">For Candidates</div>
+          <h3>24/7 interviews on mobile + desktop</h3>
+          <p class="section-description">
+            Candidates can interview anytime, from anywhere without scheduling
+            delays. This improves completion rates, speeds time-to-fill, and
+            creates a consistent experience at scale. You keep momentum while
+            protecting candidate quality.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="assets/ai_interviewer/talent_img.png" alt="Talent" />
+        </div>
+      </div>
+    </section>
+
+    <!-- cards section -->
+    <section class="cards-section padding-y">
+      <div class="bg-blur-circles">
+        <div class="blur-circle circle-1"></div>
+        <div class="blur-circle circle-2"></div>
+        <div class="blur-circle circle-3"></div>
+      </div>
+      <div class="container grid-cards">
+        <!-- left large card -->
+        <div class="card card-large">
+          <div class="card-info">
+            <div class="card-icon">
+              <img src="assets/ai_interviewer/profile_icon.png" alt="profile_icon" />
+            </div>
+            <h5 class="card-heading">Consistent scoring</h5>
+            <p class="card-desc">
+              Standardize early interviews to make candidate comparisons faster
+              and less subjective.
+            </p>
+          </div>
+
+          <div class="card-main-img">
+            <img src="assets/ai_interviewer/profile_img.png" alt="profile_img" />
+          </div>
+        </div>
+
+        <!-- right column with two cards -->
+        <div class="card-stack">
+          <!-- top card -->
+          <div class="card card-horizontal">
+            <div class="card-info">
+              <div class="card-icon">
+                <img src="assets/ai_interviewer/clock_icon.png" alt="clock Icon" />
+              </div>
+              <h5 class="card-heading">Less manager time wasted</h5>
+              <p class="card-desc">
+                Reduce low-signal screens and avoid unnecessary handoffs before
+                managers get involved.
+              </p>
+            </div>
+            <div class="card-side-img">
+              <img src="assets/ai_interviewer/clock_img.png" alt="clock_img" />
+            </div>
+          </div>
+
+          <!-- bottom card -->
+          <div class="card card-horizontal">
+            <div class="card-info">
+              <div class="card-icon">
+                <img src="assets/ai_interviewer/ai_user_icon.png" alt="ai_user_icon" />
+              </div>
+              <h5 class="card-heading">Better hiring confidence</h5>
+              <p class="card-desc">
+                Structured AI interview data supports clearer decisions across
+                teams and stakeholders.
+              </p>
+            </div>
+            <div class="card-side-img">
+              <img src="assets/ai_interviewer/ai_user_img.png" alt="ai_user_img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feedback section -->
+    <section class="feedback-section padding-y">
+      <div class="container feedback-container">
+        <div class="ceo-photo-wrapper">
+          <img src="assets/ai_interviewer/ceo_img.png" alt="Violet Herin" class="ceo-photo" />
+        </div>
+        <div class="feedback-card">
+          <span class="quote-mark">“</span>
+          <p class="feedback-text">
+            Projé has utilized the SorsX AI Interviewing process for the past
+            six months. It has truly been a game-changer in expediting screening
+            and first interviews. It captures exactly what we need to make
+            informed decisions about who we will progress to our short list of
+            candidates.
+          </p>
+          <div class="feedback-footer">
+            <div class="ceo-info">
+              <h4 class="ceo-name">Violet Herin</h4>
+              <p class="ceo-title">CEO, Projé Inc.</p>
+            </div>
+            <div class="company-logo">
+              <img src="assets/ai_interviewer/company_logo_img.png" alt="Projé Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq section -->
+    <section class="faq-section padding-y">
+      <div class="container faq-container">
+        <div class="faq-left">
+          <h3>Frequently Asked Questions</h3>
+          <p class="section-description">
+            Find quick answers to the most commonly asked questions.
+          </p>
+        </div>
+        <div class="faq-right">
+          <div class="faq-accordion">
+            <!-- item 1 -->
+            <div class="faq-item active">
+              <div class="faq-header">
+                <h6 class="faq-question">What is AI interview software?</h6>
+                <img
+                  src="assets/ai_interviewer/minus_icon.png"
+                  alt="toggle"
+                  class="faq-icon"
+                />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Software that runs structured interviews and produces
+                  consistent evaluation outputs to speed hiring decisions.
+                </p>
+              </div>
+            </div>
+            <!-- item 2 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h6 class="faq-question">Does it work for technical roles?</h6>
+                <img src="assets/ai_interviewer/plus_icon.png" alt="toggle" class="faq-icon" />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Yes—built to reduce reliance on recruiter-led technical
+                  screening and improve validation in early rounds.
+                </p>
+              </div>
+            </div>
+            <!-- item 3 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h6 class="faq-question">
+                  Can recruiters attend the interview?
+                </h6>
+                <img src="assets/ai_interviewer/plus_icon.png" alt="toggle" class="faq-icon" />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Yes—recruiters can attend live or review results afterward.
+                </p>
+              </div>
+            </div>
+            <!-- item 4 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h6 class="faq-question">
+                  Is it available on mobile and desktop?
+                </h6>
+                <img src="assets/ai_interviewer/plus_icon.png" alt="toggle" class="faq-icon" />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Yes—candidates can complete interviews on both.
+                </p>
+              </div>
+            </div>
+            <!-- item 5 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h6 class="faq-question">Can we customize questions?</h6>
+                <img src="assets/ai_interviewer/plus_icon.png" alt="toggle" class="faq-icon" />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Yes—use AI-generated questions, add your own, or blend both.
+                </p>
+              </div>
+            </div>
+            <!-- item 6 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h6 class="faq-question">Does it integrate with ATS/HRIS?</h6>
+                <img src="assets/ai_interviewer/plus_icon.png" alt="toggle" class="faq-icon" />
+              </div>
+              <div class="faq-body">
+                <p class="faq-answer">
+                  Yes—SorsX can integrate with your existing systems and
+                  workflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- stop paying section -->
+    <section class="stop-paying-section padding-y">
+      <div class="stop-paying-bg-overlay"></div>
+      <!-- content div  -->
+      <div class="container stop-paying-container z-10">
+        <div class="stop-paying-content">
+          <div class="page-name-text white-pill">Take the next step</div>
+          <h3 class="white-text-1">Stop relying on “vibes”</h3>
+          <p class="white-text">
+            Run structured AI video interviews that scale—so managers trust the
+            signal and recruiters move faster.
+          </p>
+          <div class="stop-paying-logos">
+            <img src="assets/ai_interviewer/logo_4.svg" alt="logo" />
+            <img src="assets/ai_interviewer/logo_5.svg" alt="logo" />
+            <img src="assets/ai_interviewer/logo_6.svg" alt="logo" />
+            <img src="assets/ai_interviewer/logo_7.svg" alt="logo" />
+            <img src="assets/ai_interviewer/logo_3.svg" alt="logo" />
+            <img src="assets/ai_interviewer/logo_2.svg" alt="logo" />
+          </div>
+        </div>
+
+        <div class="stop-paying-card-wrapper">
+          <div class="stop-paying-card">
+            <h6>Request a Demo</h6>
+            <p>
+              Get a personalized walkthrough and see how ScaleHire fits your
+              workflow. You'll know in one call if it's right.
+            </p>
+            <div class="card-input-group">
+              <input
+                type="email"
+                placeholder="Email"
+                class="email-input-card"
+              />
+              <button class="blue-button card-button">Book a Demo</button>
+            </div>
+            <div class="trust-badges-row">
+              <img src="assets/ai_interviewer/demo_logo_1.png" alt="Capterra" />
+              <img src="assets/ai_interviewer/demo_logo_2.png" alt="Software Advice" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer padding-y">
+      <div class="footer-container container">
+        <div class="footer-top">
+          <div class="footer-logo-section">
+            <img
+              src="assets/ai_interviewer/sorsx_logo_black.png"
+              alt="SorsX"
+              class="footer-logo"
+            />
+            <p class="text-T1">
+              SorsX is an AI recruiting platform and AI interview software that
+              plugs into your existing process, automating sourcing, screening,
+              and AI video interviews so your team focuses only on the best
+              candidates.
+            </p>
+          </div>
+          <div class="footer-links-grid">
+            <div class="footer-column">
+              <h4 class="footer-heading">Industries</h4>
+              <ul class="footer-links">
+                <li><a href="#">Hospitality</a></li>
+                <li><a href="#">Construction</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Manufacturing</a></li>
+                <li><a href="#">Professional Services</a></li>
+                <li><a href="#">Healthcare</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-heading">Business Size</h4>
+              <ul class="footer-links">
+                <li><a href="#">Small Businesses</a></li>
+                <li><a href="#">Mid Size Businesses</a></li>
+                <li><a href="#">Enterprise</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-heading">Platform</h4>
+              <ul class="footer-links">
+                <li><a href="#">SorsX AI</a></li>
+                <li><a href="#">SorsX Hire</a></li>
+                <li><a href="#">AI Interviewer</a></li>
+                <li><a href="#">SorsX Next</a></li>
+                <li><a href="#">AI ATS & CRM</a></li>
+                <li><a href="#">Demo</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-heading">Company</h4>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-heading">Privacy & Security</h4>
+              <ul class="footer-links">
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Settings</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2026 SorsX. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#"><img src="assets/ai_interviewer/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="assets/ai_interviewer/linkedIn.svg" alt="LinkedIn" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar--scrolled");
+        } else {
+          navbar.classList.remove("navbar--scrolled");
+        }
+      });
+    </script>
+
+    <script src="js/ai_interviewer.js"></script>
+  </body>
+</html>
+
+
