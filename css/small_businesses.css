@@ -67,21 +67,25 @@
     --section-px: 2rem;
   }
 }
+
 @media (min-width: 768px) {
   :root {
     --section-px: 3rem;
   }
 }
+
 @media (min-width: 1024px) {
   :root {
     --section-px: 4rem;
   }
 }
+
 @media (min-width: 1280px) {
   :root {
     --section-px: 5rem;
   }
 }
+
 @media (min-width: 1536px) {
   :root {
     --section-px: 100px;
@@ -146,20 +150,24 @@ ul {
 .flex {
   display: flex;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .flex-column {
   display: flex;
   flex-direction: column;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -168,33 +176,43 @@ ul {
 .gap-0 {
   gap: 0;
 }
+
 .gap-1 {
   gap: 0.25rem;
 }
+
 .gap-2 {
   gap: 0.5rem;
 }
+
 .gap-3 {
   gap: 0.75rem;
 }
+
 .gap-4 {
   gap: 1rem;
 }
+
 .gap-5 {
   gap: 1.25rem;
 }
+
 .gap-6 {
   gap: 1.5rem;
 }
+
 .gap-8 {
   gap: 2rem;
 }
+
 .gap-10 {
   gap: 2.5rem;
 }
+
 .gap-12 {
   gap: 3rem;
 }
+
 .gap-16 {
   gap: 4rem;
 }
@@ -202,6 +220,7 @@ ul {
 .row-gap-4 {
   row-gap: 1rem;
 }
+
 .column-gap-4 {
   column-gap: 1rem;
 }
@@ -210,6 +229,7 @@ ul {
   .gap-md-2 {
     gap: 0.5rem;
   }
+
   .gap-md-4 {
     gap: 1rem;
   }
@@ -219,6 +239,7 @@ ul {
   .gap-sm-2 {
     gap: 0.5rem;
   }
+
   .gap-sm-3 {
     gap: 0.75rem;
   }
@@ -228,18 +249,23 @@ ul {
 .mt-1 {
   margin-top: 0.5rem;
 }
+
 .mt-2 {
   margin-top: 1rem;
 }
+
 .mt-3 {
   margin-top: 1.5rem;
 }
+
 .mb-1 {
   margin-bottom: 0.5rem;
 }
+
 .mb-2 {
   margin-bottom: 1rem;
 }
+
 .mb-3 {
   margin-bottom: 1.5rem;
 }
@@ -247,9 +273,11 @@ ul {
 .p-1 {
   padding: 0.5rem;
 }
+
 .p-2 {
   padding: 1rem;
 }
+
 .p-3 {
   padding: 1.5rem;
 }
@@ -258,6 +286,7 @@ ul {
 .text-center {
   text-align: center;
 }
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -320,30 +349,35 @@ p {
   font-size: 18px;
   line-height: 28px;
 }
+
 .text-B2 {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
+
 .text-T1 {
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
 }
+
 .text-L1 {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
 }
+
 .text-L2 {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
 }
+
 .text-C1 {
   font-family: var(--font-inter);
   font-weight: 400;
@@ -358,6 +392,7 @@ p {
     color: #535862;
     font-weight: 500;
   }
+
   .text-C1 {
     font-size: 12px;
   }
@@ -373,15 +408,19 @@ p {
 .z-10 {
   z-index: 10;
 }
+
 .z-20 {
   z-index: 20;
 }
+
 .z-30 {
   z-index: 30;
 }
+
 .z-40 {
   z-index: 40;
 }
+
 .z-50 {
   z-index: 50;
 }
@@ -390,12 +429,15 @@ p {
 .top-50 {
   top: 30%;
 }
+
 .top-60 {
   top: 60%;
 }
+
 .top-70 {
   top: 70%;
 }
+
 .top-80 {
   top: 80%;
 }
@@ -405,6 +447,7 @@ p {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
 /* .padding-x {
   padding-left: var(--section-px);
   padding-right: var(--section-px);
@@ -527,8 +570,10 @@ p {
   .nav-links {
     flex-direction: column;
     gap: 0;
-    position: fixed; /* Changed to fixed for full-page feel */
-    top: 60px; /* Adjusted to fit navbar better */
+    position: fixed;
+    /* Changed to fixed for full-page feel */
+    top: 60px;
+    /* Adjusted to fit navbar better */
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.98);
@@ -537,7 +582,8 @@ p {
     border-top: 1px solid #f2f4f7;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     max-height: 0;
-    overflow-y: auto; /* Allow scrolling if menu is long */
+    overflow-y: auto;
+    /* Allow scrolling if menu is long */
     opacity: 0;
     visibility: hidden;
     transition:
@@ -549,7 +595,8 @@ p {
   }
 
   .nav-links.open {
-    max-height: 90vh; /* Larger height for mobile */
+    max-height: 90vh;
+    /* Larger height for mobile */
     opacity: 1;
     visibility: visible;
   }
@@ -571,18 +618,23 @@ p {
   .nav-links.open > div:nth-child(1) {
     transition-delay: 0.1s;
   }
+
   .nav-links.open > div:nth-child(2) {
     transition-delay: 0.15s;
   }
+
   .nav-links.open > div:nth-child(3) {
     transition-delay: 0.2s;
   }
+
   .nav-links.open > div:nth-child(4) {
     transition-delay: 0.25s;
   }
+
   .nav-links.open > div:nth-child(5) {
     transition-delay: 0.3s;
   }
+
   .nav-links.open > .cta-btn-mobile {
     transition-delay: 0.4s;
   }
@@ -591,14 +643,16 @@ p {
   .nav-links .dropdown-toggle {
     width: 100%;
     padding: 20px 24px;
-    font-size: 18px; /* Increased font size */
+    font-size: 18px;
+    /* Increased font size */
     font-weight: 500;
     color: #181d27;
     /* border: 1px solid #f9fafb; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0; /* Reset radius */
+    border-radius: 0;
+    /* Reset radius */
     background-color: transparent;
   }
 
@@ -619,7 +673,8 @@ p {
     gap: 16px;
     align-items: center;
     padding: 32px 24px;
-    margin-top: auto; /* Push to bottom if space available */
+    margin-top: auto;
+    /* Push to bottom if space available */
   }
 
   .cta-btn-mobile .login-link {
@@ -670,6 +725,7 @@ p {
   padding: 6px 12px;
   border-radius: 6px;
 }
+
 .dropdown:hover {
   background-color: var(--color-accent-hover);
 }
@@ -687,6 +743,7 @@ p {
     flex-direction: column;
     gap: 5px;
   }
+
   .dropdown.open .dropdown-icon {
     transform: rotate(180deg);
   }
@@ -758,7 +815,8 @@ p {
   .dropdown.open .dropdown-toggle {
     background-color: #f9fafb !important;
     color: #4e6be9 !important;
-    border-bottom-color: transparent; /* Remove border when menu is open */
+    border-bottom-color: transparent;
+    /* Remove border when menu is open */
   }
 
   .dropdown.open .dropdown-menu {
@@ -955,13 +1013,15 @@ button {
 
 .sub-text {
   font-family: var(--font-inter);
-  font-size: clamp(16px, 1.1vw, 20px); /* Fluid 16-20px */
+  font-size: clamp(16px, 1.1vw, 20px);
+  /* Fluid 16-20px */
   color: var(--color-text-secondary);
   margin: 30px 0px 40px 0;
   font-weight: 300;
   text-align: left;
   max-width: 810px;
-  line-height: clamp(24px, 1.56vw, 30px); /* Fluid line-height */
+  line-height: clamp(24px, 1.56vw, 30px);
+  /* Fluid line-height */
 }
 
 @media (max-width: 1536px) {
@@ -1061,7 +1121,8 @@ button {
   padding-left: var(--section-px);
   padding-right: var(--section-px);
   gap: 70px;
-  width: calc(200px * 24); /* Large width for scrolling */
+  width: calc(200px * 24);
+  /* Large width for scrolling */
   /* Animation handled via media queries */
 }
 
@@ -1094,6 +1155,7 @@ button {
   object-fit: contain;
   transition: transform 0.3s;
 }
+
 /* .slide img:hover {
   transform: translateZ(20px);
 } */
@@ -1102,6 +1164,7 @@ button {
   0% {
     transform: translateX(0);
   }
+
   100% {
     /* Adjusted to match Demo page 2 */
     transform: translateX(calc(-170px * 8));
@@ -1117,7 +1180,8 @@ button {
 /* DESKTOP STYLES (>= 768px) */
 @media (min-width: 768px) {
   .slide-track {
-    max-width: 1920px; /* Apply max-width only on desktop */
+    max-width: 1920px;
+    /* Apply max-width only on desktop */
     width: 100%;
     justify-content: space-around;
     animation: none;
@@ -1134,7 +1198,8 @@ button {
 @media (max-width: 767px) {
   .slide-track {
     animation: scroll 20s linear infinite;
-    gap: 45px; /* Ensure gap is consistent */
+    gap: 45px;
+    /* Ensure gap is consistent */
   }
 
   /* Ensure all slides are visible on mobile for the loop */
@@ -1187,7 +1252,8 @@ button {
 }
 
 .logo-stack {
-  display: none; /* Globally hidden */
+  display: none;
+  /* Globally hidden */
   width: 100%;
   gap: 32px;
   flex-wrap: wrap;
@@ -1199,12 +1265,14 @@ button {
 
 @media (max-width: 768px) {
   .slider {
-    display: grid; /* Make slider visible */
+    display: grid;
+    /* Make slider visible */
   }
 
   /* .logo-stack {
     margin-bottom: 30px;
-  } */ /* Removed */
+  } */
+  /* Removed */
 
   .hero-image-wrapper img {
     margin-top: 0;
@@ -1218,17 +1286,28 @@ button {
     width: 100%;
   }
   .btn-wrapper button {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .buttons-desktop {
     display: none;
   }
 
   .buttons-mobile {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image-wrapper {
+    height: initial !important;
+  }
+
+  .hero-image-wrapper img {
+    height: 50% !important;
   }
 }
 
@@ -1349,11 +1428,13 @@ button {
 .shortlist-section .section-description {
   color: #141219;
 }
+
 .shortlist-section h3 {
   font-size: clamp(28px, 2.4vw, 48px);
   line-height: 1.2;
   max-width: 860px;
 }
+
 .shortlist-section .section-description {
   max-width: 700px;
 }
@@ -1526,6 +1607,7 @@ button {
   position: sticky;
   top: 120px;
 }
+
 .faq-left h3 {
   font-size: clamp(28px, 2.4vw, 48px);
   font-weight: 600;
@@ -1533,6 +1615,7 @@ button {
   line-height: 1.2;
   margin: clamp(16px, 2vw, 24px) 0;
 }
+
 .faq-left h3 {
   margin-bottom: 10px;
 }
@@ -1798,6 +1881,7 @@ button {
     padding: 32px;
     background-color: #fff;
   }
+
   .footer > .container {
     background-color: #f5f5f5;
     padding: 24px;
@@ -1828,12 +1912,15 @@ button {
   width: max-content;
   /* min-width: 600px; */
   padding: 32px;
-  margin-top: 12px; /* Gap from navbar */
+  margin-top: 12px;
+  /* Gap from navbar */
   background-color: #fff;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  /* Stronger shadow */
   /* border: 1px solid #f2f4f7; */
   border-radius: 16px;
-  overflow: visible; /* Allow arrow to stick out */
+  overflow: visible;
+  /* Allow arrow to stick out */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1851,7 +1938,8 @@ button {
   content: "";
   position: absolute;
   top: -6px;
-  left: 50%; /* center relative to dropdown */
+  left: 50%;
+  /* center relative to dropdown */
   width: 12px;
   height: 12px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
@@ -1884,16 +1972,19 @@ button {
   padding: 4px;
   border-radius: 8px;
   text-decoration: none;
-  white-space: normal; /* Allow text wrapping for descriptions */
+  white-space: normal;
+  /* Allow text wrapping for descriptions */
   transition: background-color 0.2s;
   background-color: transparent;
-  color: inherit; /* Inherit or force specific color */
+  color: inherit;
+  /* Inherit or force specific color */
 }
 
 @media (max-width: 1536px) {
   .mega-menu-grid {
     gap: 18px;
   }
+
   .mega-menu-column {
     min-width: 236px;
     gap: 12px;
@@ -1909,14 +2000,18 @@ button {
 }
 
 .mega-menu-icon {
-  width: 26px; /* Container size */
+  width: 26px;
+  /* Container size */
   height: 26px;
   flex-shrink: 0;
   margin-top: 0;
   object-fit: contain;
-  background-color: #6087f4; /* Blue background */
-  padding: 5px; /* Padding for the icon inside */
-  border-radius: 6px; /* Rounded corners */
+  background-color: #6087f4;
+  /* Blue background */
+  padding: 5px;
+  /* Padding for the icon inside */
+  border-radius: 6px;
+  /* Rounded corners */
 }
 
 .mega-menu-content {
@@ -1949,7 +2044,8 @@ button {
     margin-top: 0;
     left: auto;
     transform: none;
-    display: none; /* Controlled by .dropdown.open */
+    display: none;
+    /* Controlled by .dropdown.open */
   }
 
   .dropdown.open .dropdown-menu.mega-menu {
@@ -1972,13 +2068,18 @@ button {
   }
 
   .dropdown-menu.mega-menu .mega-menu-item {
-    display: flex; /* Ensure it overrides any other display */
-    justify-content: flex-start; /* Fix the big gap issue */
-    align-items: center; /* Center icon with text vertically */
-    padding: 16px 24px; /* Matches top-level nav padding */
+    display: flex;
+    /* Ensure it overrides any other display */
+    justify-content: flex-start;
+    /* Fix the big gap issue */
+    align-items: center;
+    /* Center icon with text vertically */
+    padding: 16px 24px;
+    /* Matches top-level nav padding */
     border-bottom: 1px solid #f9fafb;
     border-radius: 0;
-    gap: 12px; /* Professional gap */
+    gap: 12px;
+    /* Professional gap */
   }
 
   .dropdown-menu.mega-menu .mega-menu-item:last-child {
@@ -2000,7 +2101,8 @@ button {
   }
 
   .mega-menu-icon {
-    width: 32px; /* Slightly larger icon container */
+    width: 32px;
+    /* Slightly larger icon container */
     height: 32px;
     padding: 6px;
   }
