@@ -33,7 +33,9 @@ if (menuBtn && menu && icon) {
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("open");
     menuOpen = !menuOpen;
-    icon.src = menuOpen ? "./assets/close.svg" : "./assets/menu.svg";
+    icon.src = menuOpen
+      ? "assets/manufacturing/close.svg"
+      : "assets/manufacturing/menu.svg";
   });
 }
 
@@ -76,13 +78,13 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     document.querySelectorAll(".faq-item").forEach((i) => {
       i.classList.remove("active");
       const iIcon = i.querySelector(".faq-icon");
-      if (iIcon) iIcon.src = "assets/plus_icon.png";
+      if (iIcon) iIcon.src = "assets/index/plus_icon.png";
     });
 
     // Toggle current item
     if (!isActive) {
       item.classList.add("active");
-      if (icon) icon.src = "assets/minus_icon.png";
+      if (icon) icon.src = "assets/index/minus_icon.png";
     }
   });
 });

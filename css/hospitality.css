@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("../assets/hospitality/fonts/BebasNeue-Regular.ttf") format("opentype");
+  src: url("../assets/hospitality/fonts/BebasNeue-Regular.ttf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +17,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../assets/hospitality/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("../assets/hospitality/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -1036,7 +1038,7 @@ button {
 
 .slider {
   margin: 0px auto;
-  padding: 40px 0;
+  padding: 30px 0;
   position: relative;
   /* background-image:
     linear-gradient(to right, #f2f4f7 1px, transparent 1px),
@@ -1059,13 +1061,25 @@ button {
 }
 
 .slide {
-  height: 40px; /* Increased from 20px for better visibility */
-  width: 120px; /* Explicit width */
-  flex-shrink: 0; /* Prevent squashing */
+  height: 40px;
+  width: 120px;
+  flex: 0 0 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 100px;
+  padding: 5px 0;
+}
+
+.slide:first-child {
+  width: 160px;
+  flex: 0 0 160px;
+  height: auto;
+}
+
+.slide:first-child img {
+  width: 100%;
+  height: auto;
 }
 
 .slide img {
@@ -1123,13 +1137,13 @@ button {
     display: flex;
   }
 
-  .slider::before,
+  /* .slider::before,
   .slider::after {
     display: block;
-  }
+  } */
 }
 
-.slider::before,
+/* .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
@@ -1152,7 +1166,7 @@ button {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
-}
+} */
 
 .btn-wrapper {
   display: flex;
@@ -1591,6 +1605,7 @@ button {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  white-space: nowrap;
   margin-bottom: 0;
   color: #535862;
   transition: color 0.3s ease;
@@ -1889,4 +1904,3 @@ button {
     padding: 6px;
   }
 }
-

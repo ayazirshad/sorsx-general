@@ -476,7 +476,7 @@ p {
   border-radius: 6px;
   transition: 0.2s ease;
   white-space: nowrap;
-  color: #535862;
+  color: #535862 !important;
 }
 
 .nav-links a:hover {
@@ -848,6 +848,7 @@ button {
 }
 
 .blue-button a {
+  display: inline-flex;
   transform: translate(0px, -2px);
 }
 
@@ -993,6 +994,12 @@ button {
   width: auto;
 }
 
+@media (max-width: 768px) {
+  .hero-trust-logos {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .main-heading {
     font-size: 34px;
@@ -1055,7 +1062,7 @@ button {
 
   .hospitality-hero .main-heading,
   .hospitality-hero .sub-text {
-    text-align: left;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1094,13 +1101,25 @@ button {
 }
 
 .slide {
-  height: 40px; /* Increased from 20px for better visibility */
-  width: 120px; /* Explicit width */
-  flex-shrink: 0; /* Prevent squashing */
+  height: 40px;
+  width: 120px;
+  flex: 0 0 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 100px;
+  padding: 5px 0;
+}
+
+.slide:first-child {
+  width: 160px;
+  flex: 0 0 160px;
+  height: auto;
+}
+
+.slide:first-child img {
+  width: 100%;
+  height: auto;
 }
 
 .slide img {
@@ -1689,6 +1708,7 @@ button {
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 0;
+  white-space: nowrap;
   color: #535862;
   transition: color 0.3s ease;
 }
@@ -2367,12 +2387,12 @@ button {
 @media (max-width: 1536px) {
   .platform-card h5 {
     font-size: 22px;
-     margin-bottom: 2px;
+    margin-bottom: 2px;
   }
   .check-circle img {
-  width: 22px;
-  height: 22px;
-}
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .platform-card .card-desc {
@@ -2745,11 +2765,22 @@ button {
 
 .t-quote {
   margin: 0 0 12px;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.45;
   color: #fff;
   font-family: var(--font-inter);
   font-weight: 300;
+}
+
+@media (max-width: 1536px) {
+  .t-quote {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .t-quote {
+    font-size: 13px;
+  }
 }
 
 .t-meta {
@@ -2762,17 +2793,34 @@ button {
 
 .t-name {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 4px;
   font-family: var(--font-inter);
 }
 
 .t-role {
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.88;
   line-height: 1.25;
   font-family: "Matter", sans-serif;
 }
+
+@media (max-width: 1536px) {
+  .t-name {
+    font-size: 13px;
+  }
+  .t-role {
+    font-size: 12px;
+  }
+}
+/* @media (max-width: 1024px) {
+  .t-name {
+    font-size: 11px;
+  }
+  .t-role {
+    font-size: 10px;
+  }
+} */
 
 .t-logo {
   margin-left: auto;

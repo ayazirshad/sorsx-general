@@ -1996,6 +1996,7 @@ button {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  white-space: nowrap;
   margin-bottom: 0;
   color: #535862;
   transition: color 0.3s ease;

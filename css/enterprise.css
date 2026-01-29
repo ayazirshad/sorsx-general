@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("../assets/enterprise/fonts/BebasNeue-Regular.ttf") format("opentype");
+  src: url("../assets/enterprise/fonts/BebasNeue-Regular.ttf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +17,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../assets/enterprise/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("../assets/enterprise/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -1024,6 +1026,14 @@ button {
   .hospitality-hero .btn-wrapper {
     justify-content: center;
   }
+
+  .hospitality-hero .hero-image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  .hospitality-hero .hero-image-wrapper img {
+    height: auto;
+  }
 }
 
 /* ========================================= */
@@ -1055,13 +1065,25 @@ button {
 }
 
 .slide {
-  height: 40px; /* Increased from 20px for better visibility */
-  width: 120px; /* Explicit width */
-  flex-shrink: 0; /* Prevent squashing */
+  height: 40px;
+  width: 120px;
+  flex: 0 0 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 100px;
+  padding: 5px 0;
+}
+
+.slide:first-child {
+  width: 160px;
+  flex: 0 0 160px;
+  height: auto;
+}
+
+.slide:first-child img {
+  width: 100%;
+  height: auto;
 }
 
 .slide img {
@@ -1681,6 +1703,7 @@ button {
   font-family: var(--font-primary);
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
   line-height: 20px;
   margin-bottom: 0;
   color: #535862;
@@ -1981,4 +2004,3 @@ button {
     padding: 6px;
   }
 }
-

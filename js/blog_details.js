@@ -87,13 +87,57 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   });
 });
 
-// blogData is now loaded from blog_data.js
+function renderBlogDetail() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = parseInt(urlParams.get("id"));
 
-function renderBlogs() {
-  const blogGrid = document.getElementById("blog-grid");
-  if (!blogGrid) return;
+  if (!blogId) {
+    window.location.href = "sorsx_blog.html";
+    return;
+  }
 
-  blogGrid.innerHTML = blogData
+  // blogData is available from sorsx_blog.js
+  const blog = window.blogData.find((b) => b.id === blogId);
+
+  if (!blog) {
+    document.getElementById("blog-title").innerText = "Blog Post Not Found";
+    return;
+  }
+  // Set Title and Meta
+  document.title = `${blog.title} | SorsX Blog`;
+  document.getElementById("blog-title").innerText = blog.title;
+  document.getElementById("blog-category").innerText = blog.category;
+  document.getElementById("blog-date").innerText = blog.date;
+  document.getElementById("blog-featured-image").src = blog.image;
+  document.getElementById("blog-featured-image").alt = blog.title;
+
+  // Placeholder content for blog body
+  document.getElementById("blog-content").innerHTML = `
+    <p>${blog.description}</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="blog-quote">
+      "SorsX is redefining how teams discover and hire talent through the power of transparent AI."
+    </div>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li>Enhanced AI transparency for better decision-making.</li>
+      <li>Expanded global reach with multi-language support.</li>
+      <li>Improved integration with existing HR tech stacks.</li>
+    </ul>
+    <p>Stay tuned for more updates as we continue to innovate and build the future of recruitment.</p>
+  `;
+
+  renderRelatedBlogs(blogId);
+}
+
+function renderRelatedBlogs(currentId) {
+  const relatedGrid = document.getElementById("related-grid");
+  if (!relatedGrid) return;
+
+  const related = window.blogData.filter((b) => b.id !== currentId).slice(0, 3);
+
+  relatedGrid.innerHTML = related
     .map(
       (blog) => `
     <article class="blog-card" onclick="location.href='blog_detail.html?id=${blog.id}'">
@@ -112,4 +156,4 @@ function renderBlogs() {
     .join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderBlogs);
+document.addEventListener("DOMContentLoaded", renderBlogDetail);
