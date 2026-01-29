@@ -1196,7 +1196,7 @@ button {
     width: 100%;
   }
   .btn-wrapper button {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1207,6 +1207,17 @@ button {
 
   .buttons-mobile {
     display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image-wrapper {
+    height: initial !important;
+  }
+
+  .hero-image-wrapper img {
+    height: 50% !important;
+
   }
 }
 
