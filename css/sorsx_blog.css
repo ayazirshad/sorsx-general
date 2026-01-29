@@ -898,10 +898,11 @@ button {
 .newsroom-header {
   text-align: center;
   background-color: var(--white);
+  margin-top: 2rem;
 }
 
 .newsroom-title {
-  font-family: "Inter", sans-serif;
+  font-family: "Matter";
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -910,16 +911,23 @@ button {
 
 .newsroom-subtitle {
   font-size: 20px;
+  font-family: "Inter";
   color: var(--text-gray);
   max-width: 600px;
   margin: 0 auto;
+}
+
+.blog-grid-section {
+  padding-top: 0;
 }
 
 /* Blog Grid */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
@@ -940,14 +948,16 @@ button {
 /* Blog Card */
 .blog-card {
   background: var(--white);
-  border-radius: 16px;
+  border-radius: 24px;
+  padding: 8px;
   overflow: hidden;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   cursor: pointer;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e5e7eb;
   display: flex;
+  box-shadow: 0px 24px 56px 0 rgba(167, 174, 186, 0.16);
   flex-direction: column;
 }
 
@@ -959,7 +969,9 @@ button {
 .blog-card-image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 16px;
+  overflow: hidden;
+  padding-top: 56.25%;
 }
 
 .blog-card-image {
@@ -975,8 +987,8 @@ button {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: rgba(13, 27, 42, 0.8);
-  color: var(--white);
+  background: rgba(5, 35, 66, 0.8);
+  color: #fff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 10px;
@@ -985,7 +997,7 @@ button {
 }
 
 .blog-card-content {
-  padding: 24px;
+  padding: 16px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

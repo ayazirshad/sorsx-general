@@ -104,7 +104,7 @@ function renderBlogs() {
       <div class="blog-card-content">
         <span class="blog-card-category">${blog.category}</span>
         <h3 class="blog-card-title">${blog.title}</h3>
-        <p class="blog-card-description">${blog.description}</p>
+        
       </div>
     </article>
   `,
@@ -113,3 +113,7 @@ function renderBlogs() {
 }
 
 document.addEventListener("DOMContentLoaded", renderBlogs);
+
+{
+  /* <p class="blog-card-description">${blog.description}</p> */
+}
