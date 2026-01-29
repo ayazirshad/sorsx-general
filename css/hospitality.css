@@ -1062,8 +1062,8 @@ button {
 
 .slide {
   height: 40px;
-  width: 120px;
-  flex: 0 0 120px;
+  width: 100px;
+  flex: 0 0 100px;
   display: flex;
   align-items: center;
   justify-content: center;
