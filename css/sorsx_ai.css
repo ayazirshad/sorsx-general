@@ -2039,6 +2039,11 @@ button {
   color: #535862;
   transition: color 0.3s ease;
 }
+@media (max-width: 768px) {
+  .footer-links a {
+    white-space: wrap;
+  }
+}
 
 .footer-links a:hover {
   color: var(--color-blue);
