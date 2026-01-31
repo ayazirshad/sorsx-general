@@ -977,6 +977,13 @@ button {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .big-sorsx-logo {
+    max-width: 170px;
+    border-radius: 40px;
+  }
+}
+
 .big-sorsx-logo img {
   width: 100%;
   height: auto;
@@ -1126,6 +1133,12 @@ button {
 .develop-left {
   position: sticky;
   top: 120px;
+}
+
+@media (max-width: 991px) {
+  .develop-left {
+    position: static;
+  }
 }
 
 .develop-grid {
@@ -1391,10 +1404,6 @@ button {
     font-size: 2.5rem;
   }
 
-  .big-sorsx-logo {
-    padding: 40px;
-  }
-
   .leadership-grid-large {
     grid-template-columns: 1fr;
   }
@@ -1431,11 +1440,6 @@ button {
 .cta-btn-container {
   display: flex;
   justify-content: center;
-}
-
-.about-cta .blue-button {
-  padding: 16px 32px;
-  font-size: 1.1rem;
 }
 
 /* ========== FOOTER SECTION ========== */
