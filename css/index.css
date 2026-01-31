@@ -2248,14 +2248,16 @@ button {
   flex-shrink: 1;
 }
 
-@media (max-width: 490px) {
-  .detail-logos img {
-    max-height: 38px;
-  }
-
+@media (max-width: 768px) {
   .detail-card {
     width: 100%;
     padding: 8px;
+  }
+}
+
+@media (max-width: 490px) {
+  .detail-logos img {
+    max-height: 38px;
   }
 }
 
