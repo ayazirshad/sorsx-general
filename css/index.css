@@ -2234,13 +2234,29 @@ button {
 
 .detail-logos {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 .detail-logos img {
-  height: auto;
+  max-height: 48px;
+  max-width: 100%;
   width: auto;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 1;
+}
+
+@media (max-width: 490px) {
+  .detail-logos img {
+    max-height: 38px;
+  }
+
+  .detail-card {
+    width: 100%;
+    padding: 8px;
+  }
 }
 
 .detail-card .text-T1 {
