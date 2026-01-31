@@ -2047,12 +2047,19 @@ button {
 .industry-cards-container {
   display: flex;
   gap: 16px;
-  height: clamp(400px, 33vw, 600px);
+  height: clamp(400px, 35vw, 600px);
+  min-height: max-content;
 }
 
 @media (max-width: 1536px) {
   .industry-cards-container {
-    height: clamp(400px, 36vw, 600px);
+    height: clamp(400px, 43vw, 600px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .industry-cards-container {
+    height: clamp(400px, 50vw, 600px);
   }
 }
 
@@ -2233,7 +2240,7 @@ button {
 }
 
 .detail-logos {
-  display: flex;
+  /* display: flex; */
   gap: 10px;
   margin-bottom: 16px;
   align-items: center;
@@ -2246,6 +2253,19 @@ button {
   height: auto;
   object-fit: contain;
   flex-shrink: 1;
+}
+
+@media (min-width: 768px) {
+  .detail-logos {
+    display: flex;
+  }
+}
+
+@media (max-width: 1300px) {
+  .detail-card {
+    width: 100%;
+    padding: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2322,7 +2342,7 @@ button {
   }
 
   .industry-card.active {
-    height: 709px;
+    height: 570px;
     flex: none;
     width: 100%;
   }
