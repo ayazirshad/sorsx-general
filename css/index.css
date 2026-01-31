@@ -2138,7 +2138,7 @@ button {
   font-size: 28px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 1536px) {
@@ -2168,13 +2168,13 @@ button {
 .hire-smarter {
   font-size: 16px;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .industry-bullets {
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .industry-bullets .bullet-item {
@@ -2182,7 +2182,7 @@ button {
   align-items: center;
   gap: 8px;
   text-decoration: underline;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 18px;
   color: #fff;
   font-weight: 500;
