@@ -2342,7 +2342,7 @@ button {
   }
 
   .industry-card.active {
-    height: 570px;
+    height: 650px;
     flex: none;
     width: 100%;
   }
