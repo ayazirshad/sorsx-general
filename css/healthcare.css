@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("../assets/healthcare/fonts/BebasNeue-Regular.ttf") format("opentype");
+  src: url("../assets/healthcare/fonts/BebasNeue-Regular.ttf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +17,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../assets/healthcare/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("../assets/healthcare/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -773,6 +775,36 @@ p {
 
 .dropdown.open .dropdown-icon {
   transform: rotate(180deg);
+}
+
+.choose-language .mega-menu-content {
+  padding: 6px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.choose-language .mega-menu-column {
+  min-width: max-content;
+  gap: 4px;
+}
+
+.choose-language .dropdown-menu.mega-menu {
+  padding: 8px;
+}
+
+.choose-lang-button {
+  background: #fff;
+  color: #181d27;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-size: 14px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.choose-lang-button:hover {
+  background-color: #f3f4f6;
 }
 
 /* ========== BUTTON ========== */
@@ -1906,4 +1938,3 @@ button {
     padding: 6px;
   }
 }
-

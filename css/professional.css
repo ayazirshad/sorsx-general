@@ -777,6 +777,36 @@ p {
   transform: rotate(180deg);
 }
 
+.choose-language .mega-menu-content {
+  padding: 6px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.choose-language .mega-menu-column {
+  min-width: max-content;
+  gap: 4px;
+}
+
+.choose-language .dropdown-menu.mega-menu {
+  padding: 8px;
+}
+
+.choose-lang-button {
+  background: #fff;
+  color: #181d27;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-size: 14px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+.choose-lang-button:hover {
+  background-color: #f3f4f6;
+}
+
 /* ========== BUTTON ========== */
 
 button {
