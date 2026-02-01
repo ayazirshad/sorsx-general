@@ -1021,10 +1021,21 @@ button {
 
 .hero-image-wrapper {
   width: 100%;
-  max-width: clamp(320px, 85vw, 980px);
+  max-width: clamp(620px, 85vw, 1220px);
   margin: 0 auto;
   position: relative;
-  margin-top: clamp(-40px, -4vw, 40px);
+  margin-top: -110px;
+}
+
+/* @media (min-width: 1000px) {
+  .hero-image-wrapper {
+    margin-top: -130px;
+  }
+} */
+@media (min-width: 1300px) {
+  .hero-image-wrapper {
+    margin-top: -180px;
+  }
 }
 
 .hero-main-img {
