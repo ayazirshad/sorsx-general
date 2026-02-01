@@ -1575,7 +1575,7 @@ button {
 }
 
 .info-content {
-  flex: 1;
+  /* flex: 1; */
   max-width: 600px;
 }
 
