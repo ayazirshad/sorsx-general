@@ -310,7 +310,7 @@ p {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: var(--color-text-tertiary);
+  /* color: var(--color-text-tertiary); */
 }
 
 /* Text Utility Classes */
@@ -883,7 +883,7 @@ button {
 }
 
 .blue-button a {
-  transform: translate(0px, -2px);
+  /* transform: translate(0px, -2px); */
 }
 
 .blue-button:hover {
