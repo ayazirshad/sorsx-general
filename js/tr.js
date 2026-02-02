@@ -4,7 +4,8 @@
   const TRfiles = [
     "ai_interviewer.html",
     "demo_page_1.html",
-    "index.html",
+    "demo_page_2.html",
+    "home.html",
     "midsize_businesses.html",
   ];
 
@@ -12,11 +13,12 @@
     localStorage.setItem(LANG_KEY, lang);
     const currentPath = window.location.pathname;
     const isUnderTR = currentPath.includes("/tr/");
-    const fileName = TRfiles.includes(currentPath.split("/").pop())
-      ? currentPath.split("/").pop()
-      : "index.html";
-    console.log("filename", fileName);
-    console.log("current path", currentPath);
+    let fileName = currentPath.split("/").pop() || "index.html";
+
+    // If we are on index.html or at the root, we map it to home.html for TR
+    if (fileName === "index.html" || fileName === "") {
+      fileName = "home.html";
+    }
 
     if (lang === "tr") {
       if (!isUnderTR) {
@@ -26,6 +28,10 @@
     } else {
       if (isUnderTR) {
         // Moving from tr to root
+        // Map home.html back to index.html for root
+        if (fileName === "home.html") {
+          fileName = "index.html";
+        }
         window.location.href = "../" + fileName;
       }
     }
@@ -35,50 +41,61 @@
     const preferredLang = localStorage.getItem(LANG_KEY);
     const currentPath = window.location.pathname;
     const isUnderTR = currentPath.includes("/tr/");
-    const fileName = currentPath.split("/").pop() || "index.html";
-    const hasTranslation = TRfiles.includes(fileName);
+    let fileName = currentPath.split("/").pop() || "index.html";
 
-    if (preferredLang === "tr" && !isUnderTR && hasTranslation) {
-      window.location.href = "tr/" + fileName;
+    if (preferredLang === "tr" && !isUnderTR) {
+      if (fileName === "index.html" || fileName === "") {
+        window.location.href = "tr/home.html";
+      } else if (TRfiles.includes(fileName)) {
+        window.location.href = "tr/" + fileName;
+      }
     } else if (preferredLang === "en" && isUnderTR) {
-      window.location.href = "../" + fileName;
+      if (fileName === "home.html") {
+        window.location.href = "../index.html";
+      } else {
+        window.location.href = "../" + fileName;
+      }
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    // const langButtons = document.querySelectorAll(".choose-lang-button");
+  window.initLanguageSwitcher = function () {
     const langEng = document.getElementById("lang-eng");
     const langTr = document.getElementById("lang-tr");
     const langEngM = document.getElementById("lang-eng-m");
     const langTrM = document.getElementById("lang-tr-m");
 
-    langEng.addEventListener("click", () => {
-      setLanguage("en");
-    });
+    if (langEng) {
+      langEng.addEventListener("click", () => {
+        setLanguage("en");
+      });
+    }
 
-    langTr.addEventListener("click", () => {
-      console.log("tr btn clicked");
-      setLanguage("tr");
-    });
+    if (langTr) {
+      langTr.addEventListener("click", () => {
+        console.log("tr btn clicked");
+        setLanguage("tr");
+      });
+    }
 
-    langEngM.addEventListener("click", () => {
-      setLanguage("en");
-    });
+    if (langEngM) {
+      langEngM.addEventListener("click", () => {
+        setLanguage("en");
+      });
+    }
 
-    langTrM.addEventListener("click", () => {
-      setLanguage("tr");
-    });
+    if (langTrM) {
+      langTrM.addEventListener("click", () => {
+        setLanguage("tr");
+      });
+    }
+  };
 
-    // langButtons.forEach((btn) => {
-    //   btn.addEventListener("click", () => {
-    //     const langText = btn.textContent.trim().toLowerCase();
-    //     if (langText === "türkçe") {
-    //       setLanguage("tr");
-    //     } else if (langText === "english") {
-    //       setLanguage("en");
-    //     }
-    //   });
-    // });
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if the placeholder exists. If not, the elements might already be in DOM.
+    // If we use dynamic loading, this will be called manually.
+    if (!document.getElementById("header-placeholder")) {
+      window.initLanguageSwitcher();
+    }
   });
 
   // Run immediately to handle auto-redirect on script load or refresh

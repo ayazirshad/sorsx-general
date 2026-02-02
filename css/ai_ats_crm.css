@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Bebas Neue";
-  src: url("../assets/ai_ats_crm/fonts/BebasNeue-Regular.ttf") format("opentype");
+  src: url("../assets/ai_ats_crm/fonts/BebasNeue-Regular.ttf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,7 +17,8 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../assets/ai_ats_crm/fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  src: url("../assets/ai_ats_crm/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -799,7 +801,7 @@ p {
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 }
 
@@ -2454,4 +2456,3 @@ button {
     padding: 6px;
   }
 }
-

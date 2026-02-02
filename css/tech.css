@@ -803,7 +803,7 @@ p {
   font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
 }
 
@@ -1288,7 +1288,7 @@ button {
   background-color: var(--color-bg);
 }
 .feature-info-section .info-image img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .info-content {
@@ -1297,7 +1297,7 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  max-width: 720px;
+  max-width: 520px;
 }
 
 /* .info-content .section-description {
