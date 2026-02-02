@@ -736,7 +736,7 @@ p {
   /* border: 1px solid #e5e7eb; */
   flex-direction: column;
   z-index: 10;
-  min-width: 180px;
+  /* min-width: 180px; */
 }
 
 .dropdown-menu a {
@@ -809,11 +809,22 @@ p {
   background: #fff;
   color: #181d27;
   border: none;
+  /* width: max-content; */
   border-radius: 6px;
   transition: 0.3s ease;
   font-size: 14px;
   font-family: var(--font-primary);
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.choose-lang-button img {
+  height: 14px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
 .choose-lang-button:hover {

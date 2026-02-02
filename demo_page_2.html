@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="js/tr.js"></script>
   </head>
   <body>
     <!-- header  -->
@@ -323,6 +324,38 @@
           </div>
 
           <div class="cta-btn-mobile">
+            <div class="dropdown choose-language">
+              <button class="dropdown-toggle">
+                <img
+                  src="assets/index/globe_01.png"
+                  alt="globe"
+                  class="dropdown-icon"
+                />
+                <p class="text-B2">Choose Language</p>
+              </button>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-grid">
+                  <div class="mega-menu-column">
+                    <button class="choose-lang-button" id="lang-eng-m">
+                      <img
+                        src="assets/index/eng_flag.png"
+                        alt="eng lang"
+                        class="language-flag"
+                      />
+                      <p class="text-B2">ENG</p>
+                    </button>
+                    <button class="choose-lang-button" id="lang-tr-m">
+                      <img
+                        src="assets/index/tr_flag.png"
+                        alt="tr lang"
+                        class="language-flag"
+                      />
+                      <p class="text-B2">TR</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <a
               href="https://www.sorsx.com/blog"
               target="_blank"
@@ -361,8 +394,22 @@
             <div class="dropdown-menu mega-menu">
               <div class="mega-menu-grid">
                 <div class="mega-menu-column">
-                  <button class="choose-lang-button">English</button>
-                  <button class="choose-lang-button">Türkçe</button>
+                  <button class="choose-lang-button" id="lang-eng">
+                    <img
+                      src="assets/index/eng_flag.png"
+                      alt="eng lang"
+                      class="language-flag"
+                    />
+                    <p class="text-B2">ENG</p>
+                  </button>
+                  <button class="choose-lang-button" id="lang-tr">
+                    <img
+                      src="assets/index/tr_flag.png"
+                      alt="tr lang"
+                      class="language-flag"
+                    />
+                    <p class="text-B2">TR</p>
+                  </button>
                 </div>
               </div>
             </div>
