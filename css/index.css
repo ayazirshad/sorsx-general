@@ -869,6 +869,10 @@ button {
     width: 100%;
     justify-content: center;
   }
+
+  .blue-border-button p {
+    font-size: 13px;
+  }
 }
 
 .blue-border-button:hover {
@@ -1398,6 +1402,14 @@ button {
 @media (max-width: 520px) {
   .svg_circle {
     width: 300px;
+  }
+
+  .section-description {
+    text-align: left;
+  }
+
+  .text-T1 {
+    line-height: 25px;
   }
 }
 
