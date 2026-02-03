@@ -2304,7 +2304,7 @@ button {
 
 .detail-logos img {
   max-height: 48px;
-  max-width: 100%;
+  /* max-width: 100%; */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -3082,6 +3082,12 @@ button {
   font-family: var(--font-inter);
   font-weight: 300;
   color: #181d27;
+}
+
+@media (max-width: 1400px) {
+  .roi__card {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 1536px) {
