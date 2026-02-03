@@ -2304,7 +2304,7 @@ button {
 
 .detail-logos img {
   max-height: 48px;
-  max-width: 100%;
+  /* max-width: 100%; */
   width: auto;
   height: auto;
   object-fit: contain;
