@@ -2303,7 +2303,7 @@ button {
 }
 
 .detail-logos img {
-  max-height: 48px;
+  max-height: 30px;
   max-width: 100%;
   width: auto;
   /* height: auto; */
@@ -2318,7 +2318,7 @@ button {
 
 @media (max-width: 490px) {
   .detail-logos img {
-    max-height: 38px;
+    max-height: 29px;
   }
 
   .detail-card {
