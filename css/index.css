@@ -3084,6 +3084,12 @@ button {
   color: #181d27;
 }
 
+@media (max-width: 1400px) {
+  .roi__card {
+    padding: 24px;
+  }
+}
+
 @media (max-width: 1536px) {
   .roi__card .text-T1 {
     font-size: 14px;
