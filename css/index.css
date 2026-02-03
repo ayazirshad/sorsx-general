@@ -2296,7 +2296,7 @@ button {
 }
 
 .detail-logos {
-  /* display: flex; */
+  display: flex;
   gap: 10px;
   margin-bottom: 16px;
   align-items: center;
@@ -2304,16 +2304,30 @@ button {
 
 .detail-logos img {
   max-height: 48px;
-  /* max-width: 100%; */
+  max-width: 100%;
   width: auto;
-  height: auto;
+  /* height: auto; */
   object-fit: contain;
   flex-shrink: 1;
 }
 
-@media (min-width: 768px) {
-  .detail-logos {
-    display: flex;
+.detail-logos .card-logo-1 {
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 490px) {
+  .detail-logos img {
+    max-height: 38px;
+  }
+
+  .detail-card {
+    width: 100%;
+    padding: 8px;
+  }
+  .detail-logos .card-logo-1 {
+    max-width: 150px;
+    height: auto;
   }
 }
 
@@ -2328,12 +2342,6 @@ button {
   .detail-card {
     width: 100%;
     padding: 8px;
-  }
-}
-
-@media (max-width: 490px) {
-  .detail-logos img {
-    max-height: 38px;
   }
 }
 
