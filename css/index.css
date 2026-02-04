@@ -2273,7 +2273,7 @@ button {
   -webkit-backdrop-filter: blur(24px);
   border: 2px solid #e35d1aec;
   border-radius: 8px;
-  padding: 20px;
+  padding: 13px 20px;
   width: 80%;
   /* margin-top: auto; */
   position: relative;
@@ -2298,12 +2298,12 @@ button {
 .detail-logos {
   display: flex;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   align-items: center;
 }
 
 .detail-logos img {
-  max-height: 30px;
+  max-height: 40px;
   max-width: 100%;
   width: auto;
   /* height: auto; */
@@ -2317,10 +2317,10 @@ button {
 }
 
 .detail-logos .mimeda {
-  max-width: 90px;
+  max-width: 110px;
 }
 .detail-logos .proje {
-  max-width: 60px;
+  max-width: 70px;
 }
 
 @media (max-width: 490px) {
