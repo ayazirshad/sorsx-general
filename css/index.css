@@ -3083,8 +3083,15 @@ button {
 }
 
 .roi__card h5 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: clamp(20px, 1.4vw, 30px) !important;
+  /* line-height: 1.2; */
+  white-space: nowrap;
   margin-bottom: 18px;
+
 }
+
 
 .roi__card .text-T1 {
   font-family: var(--font-inter);
