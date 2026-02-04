@@ -2298,7 +2298,7 @@ button {
 .detail-logos {
   display: flex;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   align-items: center;
 }
 
@@ -2314,6 +2314,13 @@ button {
 .detail-logos .card-logo-1 {
   max-width: 200px;
   height: auto;
+}
+
+.detail-logos .mimeda {
+  max-width: 90px;
+}
+.detail-logos .proje {
+  max-width: 60px;
 }
 
 @media (max-width: 490px) {
@@ -3089,9 +3096,7 @@ button {
   /* line-height: 1.2; */
   white-space: nowrap;
   margin-bottom: 18px;
-
 }
-
 
 .roi__card .text-T1 {
   font-family: var(--font-inter);
