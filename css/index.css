@@ -2324,9 +2324,9 @@ button {
 }
 
 @media (max-width: 490px) {
-  .detail-logos img {
+  /* .detail-logos img {
     max-height: 29px;
-  }
+  } */
 
   .detail-card {
     width: 100%;
