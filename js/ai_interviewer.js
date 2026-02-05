@@ -91,22 +91,43 @@ document.querySelectorAll(".faq-item").forEach((item) => {
 
 const emailInputCard = document.getElementById("emailInputCard");
 const demoBtnCard = document.getElementById("demoBtnCard");
+const emailCardError = document.getElementById("emailCardError");
 
 if (emailInputCard && demoBtnCard) {
   demoBtnCard.addEventListener("click", () => {
     const email = emailInputCard.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    resetState();
 
     if (!email) {
-      alert("Email is required");
+      showError("Email is required");
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Please enter a valid email");
+      showError("Please enter a valid email address");
       return;
     }
 
-    window.location.href = "demo_page_1.html";
+    emailInputCard.classList.add("success");
+
+    setTimeout(() => {
+      window.location.href = "demo_page_1.html";
+    }, 350);
   });
+
+  // live cleanup while typing
+  emailInputCard.addEventListener("input", resetState);
+}
+
+function showError(message) {
+  emailCardError.textContent = message;
+  emailCardError.classList.add("show");
+  emailInputCard.classList.add("error");
+}
+
+function resetState() {
+  emailInputCard.classList.remove("error", "success");
+  emailCardError.classList.remove("show");
 }
