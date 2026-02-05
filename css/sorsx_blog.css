@@ -1376,6 +1376,7 @@ button {
   color: #535862;
   margin: 0;
   white-space: normal;
+  width: max-content;
   /* line-height: 1.4; */
 }
 
