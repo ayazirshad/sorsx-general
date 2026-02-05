@@ -104,3 +104,46 @@ industryCards.forEach((card) => {
     card.classList.add("active");
   });
 });
+
+const emailInputCard = document.getElementById("emailInputCard");
+const demoBtnCard = document.getElementById("demoBtnCard");
+const emailCardError = document.getElementById("emailCardError");
+
+if (emailInputCard && demoBtnCard) {
+  demoBtnCard.addEventListener("click", () => {
+    const email = emailInputCard.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    resetState();
+
+    if (!email) {
+      showError("Email is required");
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      showError("Please enter a valid email address");
+      return;
+    }
+
+    emailInputCard.classList.add("success");
+
+    setTimeout(() => {
+      window.location.href = "demo_page_1.html";
+    }, 350);
+  });
+
+  // live cleanup while typing
+  emailInputCard.addEventListener("input", resetState);
+}
+
+function showError(message) {
+  emailCardError.textContent = message;
+  emailCardError.classList.add("show");
+  emailInputCard.classList.add("error");
+}
+
+function resetState() {
+  emailInputCard.classList.remove("error", "success");
+  emailCardError.classList.remove("show");
+}
