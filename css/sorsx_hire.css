@@ -1036,6 +1036,7 @@ button {
   margin: 0 auto;
   position: relative;
   margin-top: -110px;
+  pointer-events: none;
 }
 
 /* @media (min-width: 1000px) {
