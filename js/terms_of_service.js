@@ -7,6 +7,7 @@ document.querySelectorAll(".dropdown").forEach((dropdown) => {
   if (toggle) {
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
+
       // Close other dropdowns
       document.querySelectorAll(".dropdown").forEach((d) => {
         if (d !== dropdown) d.classList.remove("open");
@@ -32,6 +33,7 @@ let menuOpen = false;
 if (menuBtn && menu && icon) {
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("open");
+    console.log("menu clicked");
     menuOpen = !menuOpen;
     icon.src = menuOpen ? "assets/index/close.svg" : "assets/index/menu.svg";
   });
@@ -76,13 +78,13 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     document.querySelectorAll(".faq-item").forEach((i) => {
       i.classList.remove("active");
       const iIcon = i.querySelector(".faq-icon");
-      if (iIcon) iIcon.src = "assets/index/plus_icon.png";
+      if (iIcon) iIcon.src = "assets/sorsx_ai/plus_icon.png";
     });
 
     // Toggle current item
     if (!isActive) {
       item.classList.add("active");
-      if (icon) icon.src = "assets/index/minus_icon.png";
+      if (icon) icon.src = "assets/sorsx_ai/minus_icon.png";
     }
   });
 });

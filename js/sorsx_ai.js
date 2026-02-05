@@ -88,3 +88,27 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     }
   });
 });
+
+const emailInput = document.getElementById("emailInput");
+const demoBtn = document.getElementById("demoBtn");
+
+if (emailInput && demoBtn) {
+  demoBtn.addEventListener("click", () => {
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      alert("Email is required");
+      return;
+    }
+
+    // basic email format check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email");
+      return;
+    }
+
+    // ✅ only now redirect
+    window.location.href = "demo_page_1.html";
+  });
+}

@@ -468,7 +468,7 @@ p {
   border-radius: 6px;
   transition: 0.2s ease;
   white-space: nowrap;
-  color: #535862;
+  color: #535862 !important;
 }
 
 .nav-links a:hover {
@@ -589,14 +589,13 @@ p {
   .nav-links .dropdown-toggle {
     width: 100%;
     padding: 20px 24px;
-    font-size: 18px; /* Increased font size */
+    font-size: 18px;
     font-weight: 500;
     color: #181d27;
-    /* border: 1px solid #f9fafb; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0; /* Reset radius */
+    border-radius: 0;
     background-color: transparent;
   }
 
@@ -679,7 +678,6 @@ p {
 }
 
 @media (min-width: 769px) {
-  /* Click-based interaction controlled via JS (.open class) */
   .dropdown.open .dropdown-menu {
     display: flex;
     flex-direction: column;
@@ -719,7 +717,6 @@ p {
   padding: 0.5rem;
   box-shadow: 0px 24px 56px 0 rgba(167, 174, 186, 0.16);
   border-radius: 8px;
-  /* border: 1px solid #e5e7eb; */
   flex-direction: column;
   z-index: 10;
   /* min-width: 180px; */
@@ -756,7 +753,7 @@ p {
   .dropdown.open .dropdown-toggle {
     background-color: #f9fafb !important;
     color: #4e6be9 !important;
-    border-bottom-color: transparent; /* Remove border when menu is open */
+    border-bottom-color: transparent;
   }
 
   .dropdown.open .dropdown-menu {
@@ -816,7 +813,6 @@ p {
 .choose-lang-button:hover {
   background-color: #f3f4f6;
 }
-
 /* ========== BUTTON ========== */
 
 button {
@@ -844,7 +840,6 @@ button {
 }
 
 .blue-border-button p {
-  margin: 0;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
@@ -858,6 +853,17 @@ button {
   .blue-border-button p {
     font-size: 15px;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 600px) {
+  .blue-border-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blue-border-button p {
+    font-size: 15px;
   }
 }
 
@@ -882,6 +888,7 @@ button {
 }
 
 .blue-button a {
+  display: inline-flex;
   /* transform: translate(0px, -2px); */
 }
 
@@ -1002,11 +1009,12 @@ button {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  white-space: nowrap;
   margin-bottom: 0;
+  white-space: nowrap;
   color: #535862;
   transition: color 0.3s ease;
 }
+
 @media (max-width: 768px) {
   .footer-links a {
     white-space: wrap;
@@ -1097,7 +1105,7 @@ button {
   }
 
   .footer {
-    padding: 32px;
+    padding: 26px;
     background-color: #fff;
   }
   .footer > .container {
@@ -1307,7 +1315,6 @@ button {
     padding: 6px;
   }
 }
-
 /* ========== TERMS CONTENT ========== */
 .terms-content {
   max-width: 900px;
@@ -1388,9 +1395,10 @@ button {
   .toggle-btn {
     display: block;
   }
-  .nav-links {
+  /* .nav-links {
     display: none;
-  } /* Simplified for now */
+  }  */
+
   .footer-top {
     flex-direction: column;
   }

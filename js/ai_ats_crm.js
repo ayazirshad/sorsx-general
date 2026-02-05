@@ -34,8 +34,8 @@ if (menuBtn && menu && icon) {
     menu.classList.toggle("open");
     menuOpen = !menuOpen;
     icon.src = menuOpen
-      ? "assets/ai_ats_crm/close.svg"
-      : "assets/ai_ats_crm/menu.svg";
+      ? "assets/sorsx_ai/close.svg"
+      : "assets/sorsx_ai/menu.svg";
   });
 }
 
@@ -78,13 +78,35 @@ document.querySelectorAll(".faq-item").forEach((item) => {
     document.querySelectorAll(".faq-item").forEach((i) => {
       i.classList.remove("active");
       const iIcon = i.querySelector(".faq-icon");
-      if (iIcon) iIcon.src = "assets/ai_ats_crm/plus_icon.png";
+      if (iIcon) iIcon.src = "assets/sorsx_ai/plus_icon.png";
     });
 
     // Toggle current item
     if (!isActive) {
       item.classList.add("active");
-      if (icon) icon.src = "assets/ai_ats_crm/minus_icon.png";
+      if (icon) icon.src = "assets/sorsx_ai/minus_icon.png";
     }
   });
 });
+
+const emailInputATS = document.getElementById("emailInputATS");
+const demoBtnATS = document.getElementById("demoBtnATS");
+
+if (emailInputATS && demoBtnATS) {
+  demoBtnATS.addEventListener("click", () => {
+    const email = emailInputATS.value.trim();
+
+    if (!email) {
+      alert("Email is required");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email");
+      return;
+    }
+
+    window.location.href = "demo_page_1.html";
+  });
+}
