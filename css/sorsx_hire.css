@@ -2038,6 +2038,33 @@ button {
   outline: none;
 }
 
+/* Error state */
+.email-input-card.error {
+  border-color: #ef4444;
+  background: #fee2e2;
+}
+
+/* Success state */
+.email-input-card.success {
+  border-color: #22c55e;
+  background: #ecfdf5;
+}
+
+/* Error message */
+.card-error {
+  display: block;
+  margin-left: 6px;
+  font-size: 13px;
+  color: #ef4444;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card-error.show {
+  opacity: 1;
+}
+
+
 .card-button {
   justify-content: center;
   padding: 14px 32px;
